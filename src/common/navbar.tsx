@@ -1,4 +1,3 @@
-import * as React from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import CssBaseline from '@mui/material/CssBaseline'
@@ -14,12 +13,13 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import Link from 'next/link'
+import { useState } from 'react'
 
 const drawerWidth = 240
 const navItems = ['Graphs', 'Filters', 'About', 'Downloads']
 
 export default function DrawerAppBar() {
-  const [mobileOpen, setMobileOpen] = React.useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState)
@@ -32,7 +32,7 @@ export default function DrawerAppBar() {
       <Typography
         variant='h6'
         sx={{ my: 2 }}>
-        <Link href='/'>LOGO</Link>
+        <Link href='/'>Project IO</Link>
       </Typography>
       <Divider />
       <List>
@@ -70,7 +70,7 @@ export default function DrawerAppBar() {
             variant='h6'
             component='div'
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-            <Link href='/'>LOGO</Link>
+            <Link href='/'>Project IO</Link>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (

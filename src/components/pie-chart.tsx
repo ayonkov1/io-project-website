@@ -1,5 +1,12 @@
 import React from 'react'
-import { PieChart, Pie, Tooltip, Legend, Cell } from 'recharts'
+import {
+  PieChart,
+  Pie,
+  Tooltip,
+  Legend,
+  Cell,
+  ResponsiveContainer,
+} from 'recharts'
 
 const data = [
   { name: 'Principal Data Scientist', value: 2 },
@@ -28,13 +35,13 @@ const COLORS = [
 const JobDistributionPieChart = () => {
   return (
     <PieChart
-      width={400}
-      height={400}>
+      width={1000}
+      height={500}>
       <Pie
         data={data}
         cx={200}
         cy={200}
-        outerRadius={80}
+        outerRadius={100}
         fill='#8884d8'
         dataKey='value'
         label={({ name, percent }) => `${name} ${(percent * 100).toFixed(2)}%`}>

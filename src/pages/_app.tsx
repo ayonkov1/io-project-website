@@ -4,11 +4,10 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { Fragment } from 'react'
 import { useRouter } from 'next/router'
+import { StyledEngineProvider } from '@mui/material'
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
-
-  console.log(router.pathname)
 
   return (
     <Fragment>
@@ -31,9 +30,11 @@ export default function App({ Component, pageProps }: AppProps) {
           href='/favicon.ico'
         />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <StyledEngineProvider injectFirst>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </StyledEngineProvider>
     </Fragment>
   )
 }
