@@ -44,7 +44,11 @@ const rows = [
 
 export default function DataTable() {
   return (
-    <div style={{ height: '85vh', width: '100%' }}>
+    <div
+      style={{
+        width: '100%',
+      }}>
+      {/* Adjust the marginTop to match the height of your Navbar */}
       <DataGrid
         rows={rows}
         columns={columns}

@@ -29,7 +29,7 @@ const Filter = () => {
   return (
     <Box
       component='main'
-      sx={{ p: 3, fontFamily: 'fantasy' }}>
+      sx={{ p: 3 }}>
       <Toolbar />
       {graphs.map(({ id, title, subtitle, placeholder, text }) => (
         <Box key={id}>
