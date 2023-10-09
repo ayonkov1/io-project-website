@@ -1,4 +1,4 @@
-import GraphsCard from '@/components/card-for-graphs'
+import TennisChart from '@/components/filters'
 import { Box, Toolbar } from '@mui/material'
 
 const graphs = [
@@ -31,17 +31,7 @@ const Filter = () => {
       component='main'
       sx={{ p: 3 }}>
       <Toolbar />
-      {graphs.map(({ id, title, subtitle, placeholder, text }) => (
-        <Box key={id}>
-          <GraphsCard
-            key={id}
-            title={title}
-            subtitle={subtitle}
-            text={text}
-            placeholder={placeholder}
-          />
-        </Box>
-      ))}
+      <TennisChart />
     </Box>
   )
 }
