@@ -22,7 +22,8 @@
     "**/*.ts",
     "**/*.tsx",
     "src/hooks/d3.js",
-    "src/components/filters.jsx"
+    "src/components/filters.jsx",
+    "src/components/table.jsx"
   ],
   "exclude": ["node_modules"]
 }
