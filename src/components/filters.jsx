@@ -8,7 +8,6 @@ import {
   Select,
   MenuItem,
   Box,
-  Typography,
 } from '@mui/material'
 
 const SalaryChart = () => {
