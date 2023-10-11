@@ -23,7 +23,9 @@
     "**/*.tsx",
     "src/hooks/d3.js",
     "src/components/filters.jsx",
-    "src/components/table.jsx"
+    "src/components/table.jsx",
+    "src/components/zoom-pan.jsx",
+    "src/pages/insights.jsx"
   ],
   "exclude": ["node_modules"]
 }

@@ -23,6 +23,9 @@
     "react-admin": "^4.14.5",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "latest",
+    "react-svg-pan-zoom": "^3.12.1",
+    "react-svg-pan-zoom-loader": "^1.6.1",
+    "react-zoom-pan-pinch": "^3.1.0",
     "recharts": "^2.8.0",
     "styled-components": "^5.3.11"
   },
