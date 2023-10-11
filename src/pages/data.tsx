@@ -2,7 +2,7 @@ import { Inter } from "next/font/google"
 import styles from "@/styles/Home.module.css"
 
 import dynamic from "next/dynamic"
-import { Container, Toolbar, Typography } from "@mui/material"
+import { Container, Paper, Toolbar, Typography } from "@mui/material"
 const DataTable = dynamic(import("../components/table.jsx"), { ssr: false })
 
 export default function GraphPage() {
@@ -27,7 +27,9 @@ export default function GraphPage() {
         on the horizontal three dots.
       </Typography>
 
-      <DataTable />
+      <Paper>
+        <DataTable />
+      </Paper>
     </>
   )
 }
