@@ -5,7 +5,13 @@ import { useEffect, useState } from 'react'
 import { Container } from '@mui/material'
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 70 },
+  {
+    field: 'id',
+    sortable: false,
+    headerName: 'ID',
+    width: 70,
+    disableColumnMenu: true,
+  },
   { field: 'work_year', headerName: 'Work Year', width: 100 },
   { field: 'job_category', headerName: 'Job Category', width: 130, flex: 1 },
   {
@@ -29,7 +35,7 @@ const columns = [
   { field: 'company_size', headerName: 'Company Size', width: 130, flex: 1 },
   {
     field: 'adjusted_salary',
-    headerName: 'Adjusted Salary',
+    headerName: 'Adjusted Salary in $',
     width: 130,
     flex: 1,
   },
@@ -54,6 +60,7 @@ const DataTable = () => {
   const rows = data.map((row, index) => ({
     ...row,
     id: index + 1,
+    adjusted_salary: Number(row.adjusted_salary),
   }))
 
   return (
