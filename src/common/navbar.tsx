@@ -1,22 +1,22 @@
-import AppBar from '@mui/material/AppBar'
-import Box from '@mui/material/Box'
-import CssBaseline from '@mui/material/CssBaseline'
-import Divider from '@mui/material/Divider'
-import Drawer from '@mui/material/Drawer'
-import IconButton from '@mui/material/IconButton'
-import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import ListItemButton from '@mui/material/ListItemButton'
-import ListItemText from '@mui/material/ListItemText'
-import MenuIcon from '@mui/icons-material/Menu'
-import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
-import Link from 'next/link'
-import { useState } from 'react'
+import AppBar from "@mui/material/AppBar"
+import Box from "@mui/material/Box"
+import CssBaseline from "@mui/material/CssBaseline"
+import Divider from "@mui/material/Divider"
+import Drawer from "@mui/material/Drawer"
+import IconButton from "@mui/material/IconButton"
+import List from "@mui/material/List"
+import ListItem from "@mui/material/ListItem"
+import ListItemButton from "@mui/material/ListItemButton"
+import ListItemText from "@mui/material/ListItemText"
+import MenuIcon from "@mui/icons-material/Menu"
+import Toolbar from "@mui/material/Toolbar"
+import Typography from "@mui/material/Typography"
+import Button from "@mui/material/Button"
+import Link from "next/link"
+import { useState } from "react"
 
 const drawerWidth = 240
-const navItems = ['Data', 'Graphs', 'Insights', 'About']
+const navItems = ["Data", "Graphs", "Insights", "About"]
 
 export default function DrawerAppBar() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -28,11 +28,11 @@ export default function DrawerAppBar() {
   const drawer = (
     <Box
       onClick={handleDrawerToggle}
-      sx={{ textAlign: 'center' }}>
+      sx={{ textAlign: "center" }}>
       <Typography
-        variant='h6'
+        variant="h6"
         sx={{ my: 2 }}>
-        <Link href='/'>Project IO</Link>
+        <Link href="/">DS &apos;23</Link>
       </Typography>
       <Divider />
       <List>
@@ -43,7 +43,7 @@ export default function DrawerAppBar() {
             <ListItem
               key={item}
               disablePadding>
-              <ListItemButton sx={{ textAlign: 'center' }}>
+              <ListItemButton sx={{ textAlign: "center" }}>
                 <ListItemText primary={item} />
               </ListItemButton>
             </ListItem>
@@ -54,32 +54,33 @@ export default function DrawerAppBar() {
   )
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component='nav'>
+      <AppBar component="nav">
         <Toolbar>
           <IconButton
-            color='inherit'
-            aria-label='open drawer'
-            edge='start'
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}>
+            sx={{ mr: 2, display: { sm: "none" } }}>
             <MenuIcon />
           </IconButton>
           <Typography
-            variant='h6'
-            component='div'
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-            <Link href='/'>Project IO</Link>
+            variant="h6"
+            fontWeight="bold"
+            component="div"
+            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}>
+            <Link href="/">DS &apos;23</Link>
           </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Link
                 key={item}
                 href={`/${item.toLowerCase()}`}>
                 <Button
                   key={item}
-                  sx={{ color: '#fff' }}>
+                  sx={{ color: "#fff" }}>
                   {item}
                 </Button>
               </Link>
@@ -89,16 +90,16 @@ export default function DrawerAppBar() {
       </AppBar>
       <nav>
         <Drawer
-          variant='temporary'
+          variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': {
-              boxSizing: 'border-box',
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
               width: drawerWidth,
             },
           }}>
