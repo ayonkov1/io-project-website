@@ -1,14 +1,42 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Typography, Link, Box } from "@mui/material"
+import { useSpring, animated } from "react-spring"
+import { easings } from "@react-spring/web"
 
 const AboutPage = () => {
+  const names = ["Atanas", "Dimitrios", "Ioannis", "Rhea"]
+  const [shuffledNames, setShuffledNames] = useState(names.slice())
+
+  const shuffleNames = () => {
+    const shuffled = names.slice()
+    const firstIndex = Math.floor(Math.random() * names.length)
+    ;[shuffled[0], shuffled[firstIndex]] = [shuffled[firstIndex], shuffled[0]] // Swap the first name with a random name
+    setShuffledNames(shuffled.sort(() => Math.random() - 0.5))
+  }
+
+  const props = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    reset: true,
+    onRest: shuffleNames,
+    config: { duration: 1000, easing: easings.easeInOutExpo },
+  })
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      shuffleNames()
+    }, 1000)
+
+    return () => clearInterval(intervalId)
+  }, [])
+
   return (
     <Box>
       <Typography
         variant="h2"
         fontWeight="bold"
         gutterBottom>
-        Welcome to [Website Name]
+        DS &apos;23
       </Typography>
 
       <Typography
@@ -106,9 +134,10 @@ const AboutPage = () => {
         variant="body1"
         style={{ marginTop: "20px" }}>
         Sincerely,
-        <br />
-        Atanas, Dimitrios, Ioannis, Rhea
       </Typography>
+      <animated.div style={props}>
+        <Typography>{shuffledNames.join(", ")}</Typography>
+      </animated.div>
     </Box>
   )
 }

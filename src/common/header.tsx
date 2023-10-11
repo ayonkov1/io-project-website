@@ -45,14 +45,14 @@ const Header = () => {
     <Container theme={theme}>
       <Column>
         <Typography
-          variant="h3"
+          variant="h2"
           fontWeight="bold"
           color="textPrimary"
           gutterBottom>
           Charting Data Science Salaries
         </Typography>
         <Typography
-          variant="h4"
+          variant="h6"
           fontWeight="300">
           2020-2024 Insights
         </Typography>

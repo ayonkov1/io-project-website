@@ -185,7 +185,7 @@ const SalaryPrediction = () => {
   return (
     <>
       <Typography
-        variant="h2"
+        variant="h3"
         fontWeight="bold"
         marginBottom={2}>
         Salary Estimation and Prediction
