@@ -25,7 +25,8 @@
     "src/components/filters.jsx",
     "src/components/table.jsx",
     "src/components/zoom-pan.jsx",
-    "src/pages/insights.jsx"
+    "src/pages/insights.jsx",
+    "src/components/charts/salaries-bar-chart.jsx"
   ],
   "exclude": ["node_modules"]
 }

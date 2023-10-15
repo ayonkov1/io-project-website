@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Toolbar, useTheme } from "@mui/material"
+import { Box, Toolbar, Typography, useTheme } from "@mui/material"
 import Navbar from "./navbar"
 
 export default function Layout({ children }: React.PropsWithChildren) {
@@ -20,6 +20,15 @@ export default function Layout({ children }: React.PropsWithChildren) {
           paddingRight: theme.spacing(2), // Add padding to match the overall styling
         }}>
         {children}
+      </Box>
+      <Box
+        mt={5}
+        mb={3}>
+        <Typography
+          variant="body2"
+          textAlign="center">
+          Copyright Information Organization Project | Data Salaries 2023 ©
+        </Typography>
       </Box>
     </>
   )

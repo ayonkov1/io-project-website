@@ -42,13 +42,13 @@ const SalaryPrediction = () => {
       intercept: -10281.254383399792,
     },
     2024: {
-      experience_level: 34959.17432367,
-      company_size: 2353.59683889,
-      job_category: 5819.79796468,
-      employment_type: 15183.5453119,
-      remote_ratio: 570.55166812,
-      work_year: 15974.08327118,
-      intercept: -32313845.86440398,
+      experience_level: 34914.01715412,
+      company_size: 5122.52292425,
+      job_category: 6024.43371773,
+      employment_type: 2577.1101463,
+      remote_ratio: 550.81098977,
+      work_year: 15569.46812775,
+      intercept: -31476007.13071412,
     },
   }
 
