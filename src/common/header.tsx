@@ -18,15 +18,15 @@ const Container = styled("div")(({ theme }) => ({
 }))
 
 const Column = styled("div")(({ theme }) => ({
-  flex: "1 1 100%", // Full width on small screens, 1/3 on medium screens and above
+  flex: "1 1 40%", // 40% of the available space on small screens
   textAlign: "left",
   [theme.breakpoints.up("md")]: {
-    flex: "1 1 33%", // 1/3 of the available space on medium screens and above
+    flex: "1 1 40%", // 1/3 of the available space on medium screens and above
   },
 }))
 
 const ImageColumn = styled(Column)(({ theme }) => ({
-  flex: "2 1 100%", // Full width on small screens, 2/3 on medium screens and above
+  flex: "2 1 50%", // 60% of the available space on small screens
   display: "flex",
   justifyContent: "flex-end",
   order: 1, // Change the order to make it appear below on small screens

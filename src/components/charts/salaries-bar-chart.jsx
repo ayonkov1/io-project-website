@@ -9,11 +9,10 @@ import {
   MenuItem,
   Box,
   Paper,
-  Divider,
 } from "@mui/material"
 
-const SalaryChart = () => {
-  const [xAxisProperty, setXAxisProperty] = useState("experience_level")
+const SalaryBarChart = () => {
+  const [xAxisProperty, setXAxisProperty] = useState("company_location")
   const [filterColumn, setFilterColumn] = useState("")
   const [filterValue, setFilterValue] = useState("")
   const [selectedDistinctValue, setSelectedDistinctValue] = useState("")
@@ -26,7 +25,6 @@ const SalaryChart = () => {
     const fetchData = async () => {
       try {
         const response = await d3.csv("/for_graphs.csv")
-        console.log(response)
         setData(response)
         updateDistinctValues(response, filterColumn)
         updateFilterColumnOptions(response, xAxisProperty)
@@ -119,12 +117,31 @@ const SalaryChart = () => {
     makeChart(data)
   }
 
+  const getOptionLabel = (option) => {
+    switch (option) {
+      case "work_year":
+        return "Work Year"
+      case "job_category":
+        return "Job Category"
+      case "experience_level":
+        return "Experience Level"
+      case "employment_type":
+        return "Employment Type"
+      case "company_location":
+        return "Company Location"
+      case "company_size":
+        return "Company Size"
+      default:
+        return option
+    }
+  }
+
   return (
     <Box
       sx={{
         display: "flex",
         flexDirection: "row",
-        height: "80vh",
+        height: "65vh",
       }}>
       <Paper
         elevation={3}
@@ -186,7 +203,7 @@ const SalaryChart = () => {
                 <MenuItem
                   key={`${option}-${index}`}
                   value={option}>
-                  {option}
+                  {getOptionLabel(option)}
                 </MenuItem>
               ))}
             </Select>
@@ -203,14 +220,14 @@ const SalaryChart = () => {
           </Button>
           <Box
             sx={{
-              overflowY: "auto", // Use "auto" for vertical scroll
-              maxHeight: "calc(80vh - 240px)", // Adjust the max height as needed
+              overflowY: "auto",
+              maxHeight: "calc(80vh - 240px)",
               marginTop: "20px",
               "&::-webkit-scrollbar": {
-                width: "0.4em", // Adjust the width as needed
+                width: "0.4em",
               },
               "&::-webkit-scrollbar-thumb": {
-                backgroundColor: "#888", // Adjust the color as needed
+                backgroundColor: "#888",
               },
             }}>
             {distinctValues.sort().map((value) => (
@@ -233,4 +250,4 @@ const SalaryChart = () => {
   )
 }
 
-export default SalaryChart
+export default SalaryBarChart
