@@ -31,12 +31,13 @@ export default function Insights() {
             Random Forest feature importance can help identify which features
             (variables) are the most relevant in making predictions, which is
             crucial for dimensionality reduction, focusing on the most important
-            features, and simplifying models.
+            features.
           </Typography>
           <Typography variant="body2">
             We are also utilizing Linear Regression, which is a widely used
             statistical and machine learning technique due to its reliability,
-            simplicity, and interpretability.
+            simplicity, and interpretability. The right graph directly shows how
+            accurate is the prediction of the linear regression model.
           </Typography>
         </Box>
         <Box flex={{ xs: "1", md: "42.85%" }}>
