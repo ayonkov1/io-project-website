@@ -1,11 +1,19 @@
 import Image from "next/image"
-import { Box, Paper } from "@mui/material"
+import { Box, Paper, Divider, Chip } from "@mui/material"
 import SalaryPrediction from "@/components/calculate-salary/salary-prediction"
 
 export default function Insights() {
   return (
     <>
       <SalaryPrediction />
+
+      <Box
+        mt={3}
+        mb={3}>
+        <Divider>
+          <Chip label="How Does That Prediction Work?" />
+        </Divider>
+      </Box>
       <Box
         display="flex"
         flexDirection={{ xs: "column", md: "row" }}

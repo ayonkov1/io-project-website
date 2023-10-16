@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic"
-import { Box, Typography, Paper } from "@mui/material"
+import { Box, Typography, Paper, Chip, Divider } from "@mui/material"
 import Image from "next/image"
 const DataTable = dynamic(import("../components/table.jsx"), { ssr: false })
 
@@ -8,6 +8,7 @@ export default function GraphPage() {
     <>
       <Box
         display="flex"
+        alignItems="center"
         flexDirection={{ xs: "column", md: "row" }}
         gap={3}>
         <Box flex={{ xs: "1", md: "40%" }}>
@@ -54,9 +55,16 @@ export default function GraphPage() {
           </Paper>
         </Box>
       </Box>
-      <Paper>
-        <DataTable />
-      </Paper>
+      <Divider>
+        <Chip label="Interactive Data Table" />
+      </Divider>
+      <Box
+        mt={2}
+        mb={6}>
+        <Paper>
+          <DataTable />
+        </Paper>
+      </Box>
     </>
   )
 }

@@ -214,7 +214,6 @@ const SalaryPrediction = () => {
                 {convertUnderscoreToTitleCase(key)}
               </InputLabel>
               <Select
-                autoWidth
                 labelId={`${key}Label`}
                 label={convertUnderscoreToTitleCase(key)}
                 value={selectedValues[key]}
