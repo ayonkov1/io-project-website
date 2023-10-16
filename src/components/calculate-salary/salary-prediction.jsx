@@ -160,7 +160,8 @@ const SalaryPrediction = () => {
       coefficients[2024].remote_ratio *
         mappedValues.remote_ratio[remote_ratio] +
       (coefficients[2024].work_year || 0) * 2024 +
-      coefficients[2024].intercept
+      coefficients[2024].intercept -
+      14000
 
     setResult2023(
       `${salary2023.toLocaleString("en-US", {

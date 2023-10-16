@@ -45,21 +45,21 @@ const Header = () => {
     <Container theme={theme}>
       <Column>
         <Typography
-          variant="h2"
+          variant="h3"
           fontWeight="bold"
           color="textPrimary"
           gutterBottom>
-          Charting Data Science Salaries
+          Exploring Data Science Salaries
         </Typography>
         <Typography
           variant="h6"
-          fontWeight="300">
+          fontWeight="300"
+          gutterBottom>
           2020-2024 Insights
         </Typography>
         <Typography
           variant="body1"
-          color="textSecondary"
-          paragraph>
+          fontWeight="300">
           Decoding the Numbers: Unveiling Data Science Salaries from 2020 to
           2023, with a Glimpse into 2024 and the Impact of Inflation
         </Typography>
@@ -76,6 +76,7 @@ const Header = () => {
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Add a drop shadow
             objectFit: "cover",
             borderRadius: "20px",
+            opacity: 0.85,
           }}
         />
       </ImageColumn>
