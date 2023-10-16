@@ -221,7 +221,7 @@ const SalaryBarChart = () => {
           <Box
             sx={{
               overflowY: "auto",
-              maxHeight: "calc(80vh - 240px)",
+              maxHeight: "calc(65vh - 240px)",
               marginTop: "20px",
               "&::-webkit-scrollbar": {
                 width: "0.4em",
